@@ -25,7 +25,7 @@ from . import IPositionDrawer, IPositionRequester, PositionPoint, PositionArea, 
 logger = Logger.instance()
 settings = Settings.instance()
 ARENA_TAGS = dict([(v, k) for k, v in ARENA_BONUS_TYPE.__dict__.iteritems() if isinstance(v, int)])
-LANGUAGE = getClientLanguage()
+LANGUAGE = 'warmod'
 
 JSON_HEADERS = {'Content-Type': 'application/json'}
 

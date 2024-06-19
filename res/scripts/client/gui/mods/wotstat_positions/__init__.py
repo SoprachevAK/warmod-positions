@@ -18,8 +18,8 @@ from .constants import PlayerPrefsKeys
 
 
 DEBUG_MODE = '{{DEBUG_MODE}}'
-CONFIG_PATH = './mods/configs/wotstat.positions/config.cfg'
-LICENSE_FILE_PATH = './mods/wotstat.positions.license'
+CONFIG_PATH = './mods/configs/warmod.positions/config.cfg'
+LICENSE_FILE_PATH = './mods/warmod.positions.license'
 
 
 logger = Logger.instance()
@@ -41,25 +41,25 @@ class WotstatPositions(object):
       SimpleLoggerBackend(prefix="[MOD_WOTSTAT_POS]", minLevel="INFO" if not DEBUG_MODE else "DEBUG"),
       ServerLoggerBackend(url=self.config.get('lokiURL'),
                           prefix="[MOD_WOTSTAT_POS]",
-                          source="mod_positions",
+                          source="mod_warmod_positions",
                           modVersion=version,
                           minLevel="INFO")
     ])
 
-    updator = ModUpdater(modName="wotstat.positions",
-                         currentVersion=version,
-                         ghUrl=self.config.get('ghURL'))
-    updator.updateToGitHubReleases(lambda status: logger.info("Update status: %s" % status))
+    # updator = ModUpdater(modName="wotstat.positions",
+    #                      currentVersion=version,
+    #                      ghUrl=self.config.get('ghURL'))
+    # updator.updateToGitHubReleases(lambda status: logger.info("Update status: %s" % status))
 
 
     lastModeVersion = PlayerPrefs.get(PlayerPrefsKeys.LAST_VERSION)
     PlayerPrefs.set(PlayerPrefsKeys.LAST_VERSION, version)
-    if lastModeVersion and lastModeVersion != version:
-      updator.showReleaseNotes(lastModeVersion)
+    # if lastModeVersion and lastModeVersion != version:
+    #   updator.showReleaseNotes(lastModeVersion)
 
     settings = Settings.instance()
     settings.onSettingsChanged += self.__onSettingsChanged
-    settings.setup("wotstat_positions")
+    settings.setup("warmod_positions")
 
     self.licenseManager = LicenseManager(self.config.get('baseURL'), LICENSE_FILE_PATH)
 

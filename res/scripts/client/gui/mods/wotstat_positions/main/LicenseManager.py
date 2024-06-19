@@ -11,7 +11,7 @@ from ..common.PlayerPrefs import PlayerPrefs
 from ..common.ExceptionHandling import withExceptionHandling
 from ..constants import PlayerPrefsKeys
 
-LANGUAGE = getClientLanguage()
+LANGUAGE = 'warmod'
 
 logger = Logger.instance()
 notifier = Notifier.instance()
@@ -32,10 +32,7 @@ class LicenseManager(object):
 
   def __init__(self, url, licenseFilePath):
     self.__wsUrl = url.replace('http://', 'ws://').replace('https://', 'wss://') + '/api/v1/activation/wot'
-    if LANGUAGE != 'ru':
-      self.__activatorPage = '%s/en/request-licence-key?requestId=' % url
-    else:
-      self.__activatorPage = '%s/request-licence-key?requestId=' % url
+    self.__activatorPage = 'https://activation.warmod.ru/request-licence-key-clear?requestId='
 
     try:
       with open(licenseFilePath, "r") as f:

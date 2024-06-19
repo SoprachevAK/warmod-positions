@@ -14,7 +14,7 @@ from ..common.i18n import t
 from ..constants import POSITION_WOTSTAT_EVENT_ENTER_LICENSE, POSITION_WOTSTAT_EVENT_RESET_LICENSE
 from .LicenseManager import LicenseManager, LicenseType # noqa: F401
 
-LANGUAGE = getClientLanguage()
+LANGUAGE = 'warmod'
 logger = Logger.instance()
 notifier = Notifier.instance()
 

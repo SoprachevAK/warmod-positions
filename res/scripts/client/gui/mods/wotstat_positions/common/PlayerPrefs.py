@@ -8,7 +8,7 @@ from .ExceptionHandling import withExceptionHandling, logCurrentException
 from .Logger import Logger
 
 _preferences_path = unicode_from_utf8(BigWorld.wg_getPreferencesFilePath())[1]
-PREFERENCES_PATH = os.path.normpath(os.path.join(os.path.dirname(_preferences_path), 'mods', 'wotstat.positions'))
+PREFERENCES_PATH = os.path.normpath(os.path.join(os.path.dirname(_preferences_path), 'mods', 'warmod.positions'))
 
 logger = Logger.instance()
 

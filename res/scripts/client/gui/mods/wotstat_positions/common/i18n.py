@@ -7,7 +7,7 @@ def highlight(text):
   return '<font color="#c5c5b4">%s</font>' % text
 
 RU = {
-  'settings:modDisplayName': 'Мод «Позиции от WotStat»',
+  'settings:modDisplayName': 'Мод позиций WARMOD',
   'settings:showArea': 'Отображать области эффективности',
   'settings:showMinimapMarkers': 'Отображать позиции на миникарте',
   'settings:showIdealMarker': 'Отображать <b>наилучшую</b> позицию в 3D',
@@ -36,13 +36,13 @@ RU = {
   'battleMessage:reportSendTimeLimit': 'Жалоба уже была отправлена',
   'hangarMessage:cannotResetFileLicense': 'Файловая лицензия не может быть сброшена. Пожалуйста, удалите файл лицензии вручную',
   'hangarMessage:licenseReset': 'Персональная лицензия сброшена',
-  'updateMessage:header': 'Новая версия «Позиции от WotStat»',
+  'updateMessage:header': 'Новая версия «Позиций WARMOD',
   'updateMessage:releaseNotesPrefix': 'Версия мода <b>v{version}</b> успешно установлена.\n\nЧто нового:',
   'releaseNotes:1.0.1': '• Адаптация для версии %s\n• Адаптация для режима %s\n• Исправлены незначительные ошибки' % (highlight('Lesta 1.27'), highlight('Натиск')),
 }
 
 EN = {
-  'settings:modDisplayName': 'Positions by WotStat',
+  'settings:modDisplayName': 'Positions WARMOD',
   'settings:showArea': 'Display efficiency areas',
   'settings:showMinimapMarkers': 'Display positions on the minimap',
   'settings:showIdealMarker': 'Display the <b>best</b> position in 3D',
@@ -71,7 +71,7 @@ EN = {
   'battleMessage:reportSendTimeLimit': 'Report has already been sent',
   'hangarMessage:cannotResetFileLicense': 'File license cannot be reset. Please delete the license file manually',
   'hangarMessage:licenseReset': 'Personal license reset',
-  'updateMessage:header': 'New version \'Positions by WotStat\'',
+  'updateMessage:header': 'New version \'Positions by WARMOD\'',
   'updateMessage:releaseNotesPrefix': 'Mod version <b>v{version}</b> installed.\n\nWhat\'s new:',
   'releaseNotes:1.0.1': '• Adaptation for version %s\n• Adaptation for mode %s\n• Minor bugs fixed' % (highlight('Lesta 1.27'), highlight('Onslaught')),
 }

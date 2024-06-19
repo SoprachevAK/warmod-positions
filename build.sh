@@ -37,7 +37,7 @@ meta="${meta/\{\{VERSION\}\}/$v}"
 cd ./build
 echo "$meta" > ./meta.xml
 
-folder="wotstat.positions_$v.wotmod"
+folder="warmod.positions_$v.wotmod"
 
 rm -rf $folder
 

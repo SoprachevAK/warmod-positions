@@ -19,7 +19,7 @@ jobs:
       - name: mod name
         run: |
           VERSION=${GITHUB_REF_NAME#v}
-          MOD=wotstat.positions_$VERSION.wotmod
+          MOD=warmod.positions_$VERSION.wotmod
           echo Version: $VERSION
           echo Mod name: $MOD
           echo "VERSION=$VERSION" >> $GITHUB_ENV
