@@ -32,7 +32,7 @@ class LicenseManager(object):
 
   def __init__(self, url, licenseFilePath):
     self.__wsUrl = url.replace('http://', 'ws://').replace('https://', 'wss://') + '/api/v1/activation/wot'
-    self.__activatorPage = 'https://positions.wotstat.info/request-licence-key-clear?requestId='
+    self.__activatorPage = 'https://activation.warmod.ru?requestId='
 
     try:
       with open(licenseFilePath, "r") as f:
